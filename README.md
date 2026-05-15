@@ -1,6 +1,7 @@
-# 🏥 CareCast – Hospital Resource Forecasting & Anomaly Detection
+# 🏥 CareCast
 
-**AI-powered healthcare analytics platform for forecasting hospital resources, detecting operational anomalies, and monitoring healthcare KPIs in real time.**
+**Hospital Resource Forecasting & Anomaly Detection
+AI-powered healthcare analytics platform for forecasting hospital resources, detecting operational anomalies, and monitoring healthcare KPIs in real time.**
 
 CareCast is a machine learning-based healthcare intelligence dashboard designed to help hospitals proactively manage patient inflow, optimize resource allocation, monitor healthcare performance programs, and identify abnormal operational patterns using predictive analytics.
 
