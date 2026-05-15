@@ -54,7 +54,7 @@ def send_email_alert(subject, body):
 # PAGE CONFIGURATION
 # =====================================================
 st.set_page_config(
-    page_title="HCDA – Hospital Resource Forecasting",
+    page_title="CareCast – Hospital Resource Forecasting",
     page_icon="🏥",
     layout="wide"
 )
@@ -142,7 +142,7 @@ st.markdown("""
 # HEADER
 # =====================================================
 st.markdown(
-    '<div class="main-title">🏥 Hospital Resource Forecasting Dashboard</div>',
+    '<div class="main-title">🏥 CareCast – Hospital Resource Forecasting Dashboard</div>',
     unsafe_allow_html=True
 )
 
