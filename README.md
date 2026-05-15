@@ -11,10 +11,10 @@ CareCast is a machine learning-based healthcare intelligence dashboard designed 
 1. [🚀 Live Demo](#-live-demo)
 2. [📌 Overview](#-overview)
 3. [✨ Key Features](#-key-features)
-4. [🏗️ System Architecture](#️-system-architecture)
-5. [🧠 Machine Learning Models](#-machine-learning-models)
-6. [🏥 Healthcare Programs Analytics](#-healthcare-programs-analytics)
-7. [📸 Dashboard Screenshots](#-dashboard-screenshots)
+4. [📸 Dashboard Screenshots](#-dashboard-screenshots)
+5. [🏗️ System Architecture](#️-system-architecture)
+6. [🧠 Machine Learning Models](#-machine-learning-models)
+7. [🏥 Healthcare Programs Analytics](#-healthcare-programs-analytics)
 8. [🛠️ Tech Stack](#️-tech-stack)
 9. [📂 Project Structure](#-project-structure)
 10. [⚙️ Installation & Setup](#️-installation--setup)
@@ -57,6 +57,40 @@ The platform combines forecasting models, anomaly detection systems, healthcare 
 - ⚡ Real-time dashboard monitoring with auto-refresh
 - 📧 Automated SMTP email notifications for abnormal events
 - ☁️ Fully deployed Streamlit cloud application
+
+---
+
+# 📸 Dashboard Screenshots
+
+## 🏥 Main Dashboard
+
+<p align="center">
+<img src="assets/dashboard.png" width="100%">
+</p>
+
+---
+
+## 📈 Forecast Visualization
+
+<p align="center">
+<img src="assets/forecast.png" width="100%">
+</p>
+
+---
+
+## 🚨 Anomaly Detection
+
+<p align="center">
+<img src="assets/anomaly.png" width="100%">
+</p>
+
+---
+
+## 📊 Historical Resource Trends
+
+<p align="center">
+<img src="assets/historical_data.png" width="100%">
+</p>
 
 ---
 
@@ -153,40 +187,6 @@ Analyzes:
 
 <p align="center">
 <img src="assets/h_programs.png" width="100%">
-</p>
-
----
-
-# 📸 Dashboard Screenshots
-
-## 🏥 Main Dashboard
-
-<p align="center">
-<img src="assets/dashboard.png" width="100%">
-</p>
-
----
-
-## 📈 Forecast Visualization
-
-<p align="center">
-<img src="assets/forecast.png" width="100%">
-</p>
-
----
-
-## 🚨 Anomaly Detection
-
-<p align="center">
-<img src="assets/anomaly.png" width="100%">
-</p>
-
----
-
-## 📊 Historical Resource Trends
-
-<p align="center">
-<img src="assets/historical_data.png" width="100%">
 </p>
 
 ---
@@ -322,17 +322,16 @@ These metrics help compare forecasting performance across forecasting models.
 <img align="center" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email" height="40" width="40" />
 </a>
 
+&nbsp;
 
 <a href="https://www.linkedin.com/in/machupalli-purushothama-reddy-8544793b4/" target="blank">
 <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="linkedin" height="40" width="40" />
 </a>
 
-
+&nbsp;
 
 <a href="https://github.com/PurushothamaReddyM" target="blank">
 <img align="center" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" height="40" width="40" />
 </a>
 
 </p>
-
----
