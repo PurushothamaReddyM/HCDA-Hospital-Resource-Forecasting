@@ -1,0 +1,8 @@
+streamlit
+pandas
+plotly
+numpy
+matplotlib
+prophet==1.1.4
+cmdstanpy==1.2.4
+

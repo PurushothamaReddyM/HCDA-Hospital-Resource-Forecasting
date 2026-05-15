@@ -36,6 +36,9 @@ for date in dates:
     oxygen_usage = int(icu_occupied * np.random.uniform(20, 30))
 
     emergencies = int(admissions * np.random.uniform(0.2, 0.4))
+    # Readmissions (based on patients + emergencies)
+    rate = min(0.25, 0.1 + 0.002 * emergencies)
+    readmissions = int(admissions * rate)
 
     # Weather
     temperature = np.random.randint(20, 40)
@@ -47,11 +50,13 @@ for date in dates:
         icu_occupied += np.random.randint(5, 10)
         oxygen_usage += np.random.randint(100, 200)
         emergencies += np.random.randint(10, 20)
-
+        rate = min(0.25, 0.1 + 0.002 * emergencies)
+        readmissions = int(admissions * rate)
     data.append([
         date.strftime("%Y-%m-%d"),
         patients,
         admissions,
+        readmissions,
         discharges,
         beds_occupied,
         icu_occupied,
@@ -67,6 +72,7 @@ columns = [
     "date",
     "patients",
     "admissions",
+    "readmissions",
     "discharges",
     "beds_occupied",
     "icu_occupied",
@@ -80,6 +86,6 @@ columns = [
 df = pd.DataFrame(data, columns=columns)
 
 # Save to CSV
-df.to_csv("h_data.csv", index=False)
+df.to_csv("data/h_data.csv", index=False)
 
 print("✅ Realistic hospital dataset generated: h_data.csv")
