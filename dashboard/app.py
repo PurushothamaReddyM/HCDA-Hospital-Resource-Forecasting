@@ -31,10 +31,9 @@ from models.anomaly_detection import detect_anomalies
 # EMAIL ALERT FUNCTION
 # =====================================================
 def send_email_alert(subject, body):
-    sender_email = "reddypurushothama257@gmail.com"
-    sender_password = "sqbojztvulzvsvrv"
-    receiver_email = "machupalli.purushoth2023@vitstudent.ac.in"
-
+    sender_email = st.secrets["EMAIL_USER"]
+    sender_password = st.secrets["EMAIL_PASSWORD"]
+    receiver_email = st.secrets["RECEIVER_EMAIL"]
     try:
         msg = MIMEText(body)
         msg["Subject"] = subject
