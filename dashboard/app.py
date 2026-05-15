@@ -163,7 +163,7 @@ hero_path = os.path.join(PROJECT_ROOT, "assets", "hero.png")
 
 with col1:
     if os.path.exists(hero_path):
-        st.image(hero_path, use_container_width=True)
+        st.image(hero_path, width="stretch")
     else:
         st.warning("hero.png not found")
 
@@ -220,7 +220,7 @@ with st.sidebar:
 
     st.markdown("---")
 
-    if st.button("🚀 Run Forecast", use_container_width=True):
+    if st.button("🚀 Run Forecast", width="stretch"):
         st.session_state.run_forecast = True
 
     run_forecast = st.session_state.run_forecast
@@ -243,7 +243,7 @@ with st.sidebar:
     manual_readmissions = st.number_input("Readmissions", min_value=0, value=20)
     
 
-    if st.button("✅ Add Record", use_container_width=True):
+    if st.button("✅ Add Record", width="stretch"):
         if manual_readmissions > manual_admissions:
             st.error("❌ Readmissions cannot exceed admissions")
             st.stop()
@@ -344,7 +344,7 @@ hist_fig.update_layout(
 
 st.plotly_chart(
     hist_fig,
-    use_container_width=True,
+    width="stretch",
     config={
         "scrollZoom": True,
         "displaylogo": False,
@@ -654,7 +654,7 @@ if run_forecast:
         yaxis_title=resource_name
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     st.markdown(
             '<div class="section-title">📊 Forecast Evaluation Metrics</div>',
@@ -662,9 +662,28 @@ if run_forecast:
     )
     
     m1, m2, m3 = st.columns(3)
-    m1.metric("MAE", round(mae, 2))
-    m2.metric("RMSE", round(rmse, 2))
-    m3.metric("MAPE", f"{round(mape, 2)}%")
+    with m1:
+        st.markdown(f"""
+        <div class="card">
+            <h4>MAE</h4>
+            <h2>{round(mae, 2)}</h2>
+        </div>
+        """, unsafe_allow_html=True)
+    with m2:
+        st.markdown(f"""
+        <div class="card">
+            <h4>RMSE</h4>
+            <h2>{round(rmse, 2)}</h2>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with m3:
+        st.markdown(f"""
+        <div class="card">
+            <h4>MAPE</h4>
+            <h2>{round(mape, 2)}%</h2>
+        </div>
+        """, unsafe_allow_html=True)
 
     st.markdown(
         '<div class="section-title">🤖 Model Comparison</div>',
@@ -676,7 +695,7 @@ if run_forecast:
         "RMSE": [round(rmse, 2), round(xgb_rmse, 2)],
         "MAPE": [round(mape, 2), round(xgb_mape, 2)]
     })
-    st.dataframe(comparison_df, use_container_width=True)
+    st.dataframe(comparison_df, width="stretch")
 
     # =====================================================
     # TABLE + IMAGE
@@ -693,15 +712,16 @@ if run_forecast:
             "yhat_upper": "Upper Bound"
         })[["Date", f"Predicted {resource_name}", "Lower Bound", "Upper Bound"]]
 
-        forecast_table = forecast_table.round(2)
+        numeric_cols = forecast_table.select_dtypes(include=["number"]).columns
+        forecast_table[numeric_cols] = forecast_table[numeric_cols].round(2)
 
-        st.dataframe(forecast_table, use_container_width=True, height=520)
+        st.dataframe(forecast_table, width="stretch", height=520)
 
     with tcol2:
         context_path = os.path.join(PROJECT_ROOT, "assets", "context.png")
         if os.path.exists(context_path):
             context_img = Image.open(context_path)
-            st.image(context_img, use_container_width=True)
+            st.image(context_img, width="stretch")
         else:
             st.warning("context.png not found")
 
@@ -768,7 +788,7 @@ Value: {latest_row[target_column].iloc[0]}
         st.success("✅ No critical anomalies detected")
 
     st.markdown("### 📡 Latest Incoming Records")
-    st.dataframe(anomaly_df.tail(10), use_container_width=True)
+    st.dataframe(anomaly_df.tail(10), width="stretch")
 
     anom_fig = go.Figure()
 
@@ -798,7 +818,7 @@ Value: {latest_row[target_column].iloc[0]}
 
     st.plotly_chart(
         anom_fig,
-        use_container_width=True,
+        width="stretch",
         config={"displaylogo": False}
     )
 except Exception as e:
