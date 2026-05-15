@@ -20,7 +20,7 @@ CareCast is a machine learning-based healthcare intelligence dashboard designed 
 10. [⚙️ Installation & Setup](#️-installation--setup)
 11. [📊 Forecast Evaluation Metrics](#-forecast-evaluation-metrics)
 12. [🚧 Future Improvements](#-future-improvements)
-13. [👨‍💻 Author](#-author)
+13. [👨‍💻 Author](#author)
 
 ---
 
@@ -312,7 +312,7 @@ These metrics help compare forecasting performance across forecasting models.
 
 ---
 
-# 👨‍💻 Author
+# Author
 
 ## Purushothama Reddy M
 
